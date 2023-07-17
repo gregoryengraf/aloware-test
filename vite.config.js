@@ -6,10 +6,11 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/app.scss',
+                'resources/css/app.css',
                 'resources/js/app.js',
             ],
             refresh: true,
+            valetTls: 'aloware.test',
         }),
         vue({
             template: {
@@ -23,6 +24,7 @@ export default defineConfig({
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',
+            '@': '/resources',
         },
     },
 });
